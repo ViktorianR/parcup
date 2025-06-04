@@ -1,0 +1,36 @@
+.park {
+    height: 94px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    margin-bottom: 12px;
+    display: flex;
+
+    &__image {
+        width: 87px;
+        height: 70px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: 0 0 auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__name {
+        color: #1D1F24;
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}

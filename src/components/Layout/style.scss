@@ -1,0 +1,15 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100vw;
+    padding: 24px 13px 0;
+
+    &__content {
+        flex: 1;
+
+        .react-swipeable-view-container {
+            height: 100%;
+        }
+    }
+}

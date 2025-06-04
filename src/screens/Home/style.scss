@@ -1,0 +1,18 @@
+.dashboard {
+    height: 100%;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 114px;
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+}
