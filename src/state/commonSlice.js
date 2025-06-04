@@ -305,12 +305,16 @@ export const commonSlice = createSlice({
 
         targetSpace.booked = true
         state.park = targetPark
+        state.bookCandidate = null
     },
     setBookCandidate: (state, action) => {
         const targetPark = state.parks.find(park => park.id === action.payload.parkID)
         const targetSpace = targetPark.spaces[action.payload.id]
 
-        state.bookCandidate = targetSpace
+        state.bookCandidate = {
+            ...targetSpace,
+            parkID: action.payload.parkID,
+        }
     },
     clearBookCandidate: (state) => {
         state.bookCandidate = null
@@ -324,6 +328,9 @@ export const commonSlice = createSlice({
     setSpaceToPay: (state) => {
         state.spaceToPay = state.bookCandidate
     },
+    clearSpaceToPay: (state) => {
+        state.spaceToPay = null
+    },
   },
 })
 
@@ -335,6 +342,7 @@ export const {
     setBookCandidate,
     clearBookCandidate,
     setSpaceToPay,
+    clearSpaceToPay,
 } = commonSlice.actions
 
 export default commonSlice.reducer

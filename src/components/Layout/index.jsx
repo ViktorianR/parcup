@@ -10,9 +10,10 @@ import BookingModal from '@components/BookingModal'
 import './style.scss'
 
 const Layout = () => {
-  const { pageIndex, spaceToPay } = useSelector(state => ({
+  const { pageIndex, spaceToPay, park } = useSelector(state => ({
     pageIndex: state.common.pageIndex,
     spaceToPay: state.common.spaceToPay,
+    park: state.common.park,
   }))
 
   const dispatch = useDispatch()
@@ -28,7 +29,7 @@ const Layout = () => {
         <SwipeableViews
           className='layout__content'
           enableMouseEvents={false}
-          disabled={pageIndex === 0}
+          disabled={!park}
           index={pageIndex}
           onChangeIndex={swipeToHome}
         >
