@@ -8,6 +8,7 @@ const ParkItem = ({
     image,
     name,
     address,
+    price,
     id,
 }) => {
     const dispatch = useDispatch()
@@ -26,6 +27,9 @@ const ParkItem = ({
                 <address className='park__address'>
                     {address}
                 </address>
+                <span className='park__price'>
+                    {price}
+                </span>
             </div>
         </div>
     )

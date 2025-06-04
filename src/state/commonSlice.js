@@ -12,6 +12,7 @@ const initialState = {
         name: 'Apollo Mall',
         address: 'Dnipro, Titova st. 36',
         image: parkImage,
+        price: 100,
         spaces: {
             "01": {
                 id: 1,
@@ -104,6 +105,7 @@ const initialState = {
         name: 'Dafi',
         address: 'Dnipro, Zorianiy bulvar 1A',
         image: dafiImage,
+        price: 100,
         spaces: {
             "01": {
                 id: 1,
@@ -196,6 +198,7 @@ const initialState = {
         name: 'Opera',
         address: 'Dnipro, Yavornitskogo st. 72a',
         image: operaImage,
+        price: 100,
         spaces: {
             "01": {
                 id: 1,
